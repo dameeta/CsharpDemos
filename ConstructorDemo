@@ -1,0 +1,67 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp6
+{
+    public class Employee
+    {
+
+        int id=101;
+        string ename="Sudhir Sharma";
+        string address="Ludhiyana";
+        int age=34;
+
+
+        public Employee() {
+            Console.WriteLine("Default Constructor");
+        }
+
+        public Employee(int id, string name)
+        { 
+             id= this.id;
+            name=this.ename ;
+            Console.WriteLine(" id  and name of Employee is :" + id + name );
+
+
+        }
+
+        public Employee(string address, int age)
+        {
+            this.address = address;
+            this.age = age;
+            Console.WriteLine(" Address and age of Employee is :" +  address + age);
+
+
+
+        }
+        public Employee(int id, int age, string address)
+
+        {
+            this.id = id;
+            this.address=address;
+            this.age = age;
+            Console.WriteLine(" id , address and age of Employee is :" + id + address + age);
+                 
+
+        }
+        ~Employee()
+        {
+            Console.WriteLine("Destructor called");
+        
+        }
+        public static void Main(string[] args)
+        {
+
+            Employee e1 = new Employee();
+            Employee e2= new Employee(101,"Samhita");
+            Employee e3 = new Employee(201, 35,"Pune");
+            Employee e4 = new Employee("Hyderabad", 40);
+
+        }
+
+
+    }
+}
