@@ -1,0 +1,66 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp6
+{
+
+    public interface IFather{
+        void FatherName(string name);
+        void hairColor();
+        
+
+}
+    public interface IMother
+    {
+        void MatherName();
+        void height();
+
+
+    }
+    class son : IFather, IMother
+    {
+        public void FatherName(string name)
+        {
+            Console.Write( name +" ");
+        }
+
+        public void hairColor()
+        {
+            Console.WriteLine("\nSons Hair color is brown");
+        }
+
+        public void height()
+        {
+            Console.WriteLine("\nHeight is 5.3");
+                }
+
+        public void MatherName()
+        {
+            Console.Write("Sudha ");
+
+        }
+
+        public void sonName()
+        { 
+        Console.Write("Tarak ");
+        }
+
+        public static void Main(string[] args)
+        { 
+            son s = new son();
+            Console.WriteLine("Printing details of Son..");
+            s.sonName();
+            s.MatherName();
+            s.FatherName("Satish");
+            s.hairColor();
+            s.height();
+
+        
+        
+        
+        }
+    }
+}
