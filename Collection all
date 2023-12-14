@@ -1,0 +1,98 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.Remoting.Metadata.W3cXsd2001;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp6
+{
+
+
+    internal class ArrayListDemo
+    {
+        public static void Main(string[] args)
+        { 
+        ArrayList  arrayList = new ArrayList();
+            Console.WriteLine(arrayList.Capacity);
+            arrayList.Add(102);
+            arrayList.Add(23);
+            arrayList.Add(56);
+            arrayList.Add(87);
+            arrayList.Add(56);
+            arrayList.Insert(3, 89);
+            //  arrayList.Add("New");
+            Console.WriteLine(arrayList.Capacity);
+
+            foreach (int i in arrayList)
+            {
+                Console.WriteLine(i);
+
+            }
+            List<string> langs = new List<string>();
+            langs.Add("Java");
+            langs.Add("C#");
+            langs.Add("C++");
+            langs.Add("Javascript");
+
+            Console.WriteLine(langs.Contains("C#"));
+            Console.WriteLine(langs[1]);
+
+            langs.Remove("C#");
+            Console.WriteLine(langs.Contains("C#"));
+
+            langs.Insert(2, "Haskell");
+            langs.Sort();
+            foreach (string lang in langs)
+            { Console.WriteLine(lang); }
+
+            Stack stack = new Stack();
+            stack.Push("hello");
+            stack.Push("sleepy");
+            stack.Push("Wake up");
+            stack.Push("Fast");
+            Console.WriteLine(stack.Count);
+            Console.WriteLine(stack.ToString());
+            string s = (string)stack.Pop();
+            Console.WriteLine(s);
+            s= (string)stack.Pop();
+            Console.WriteLine(s);
+            s= (string)stack.Peek();
+            Console.WriteLine(s);
+            Queue queue = new Queue();
+            queue.Enqueue("hello");
+            queue.Enqueue("Happy");
+           string s2 = (string)queue.Dequeue();
+
+            Console.WriteLine(s2);
+            s2 = (string)queue.Dequeue();
+            Console.WriteLine(s2);
+            Hashtable ht = new Hashtable();
+            ht[101] = "Sales";
+            ht[309] = "IT";
+            ht[19] = "Account";
+            ht[67] = "Logistics";
+           /* 
+            * foreach(DictionaryEntry entry in  ht)
+            {
+            int id=(int)entry.Key;
+                Console.Write(id+ "\t");
+            string dept=entry.Value.ToString();
+                Console.Write(dept+ "\t");
+                Console.WriteLine();*/
+
+                SortedList sortedList = new SortedList();
+                sortedList["IN"] = "India";
+                sortedList["US"] = "USA";
+                sortedList["CN"] = "CANADA";
+                foreach(DictionaryEntry entry2 in sortedList)
+                {
+                    Console.WriteLine("Key is:{0} Value is: {1}",entry2.Key,entry2.Value);
+
+                }
+;            }
+
+        }
+    }
+
