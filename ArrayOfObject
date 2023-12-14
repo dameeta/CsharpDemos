@@ -1,0 +1,51 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp6
+{
+    public class Product
+    {
+        private int Id { get; set; }
+        private string Name { get; set; }
+        private string Description { get; set; }
+        private string Category { get; set; }
+
+        public Product()
+        {
+
+
+        }
+        public Product(int id, string name, string description, string cat)
+        {
+
+            Id = id;
+            Name = name;
+            Description = description;
+            Category = cat;
+
+        }
+
+        internal class ArrayOfObject
+        {
+
+            public static void Main(string[] args)
+            {
+
+                Product[] product = new Product[5];
+                product[0] = new Product(101,"T-Shirt","Addidas","Cloth");
+                product[1] = new Product(192, "Ludo", "Funschool", "Toys");
+                product[2] = new Product(1990, "Swing", "Funschool", "Toys");
+                product[3] = new Product(894, "Marker", "Reynold", "Stationary");
+                product[4] = new Product(334, " Rice", "India Gate", "Grocery");
+
+                for(int i = 0; i < 5;i++){ 
+
+                Console.WriteLine(product[i].Id +" "+ product[i].Name+ " " + product[i].Description+ " "+ product[i].Category);
+                }
+            }
+        }
+    }
+}
